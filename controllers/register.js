@@ -6,7 +6,7 @@ const handleRegister = (req , res, db, bcrypt)=>{
        !(req.body.email.includes('@')) ||
        !(req.body.email.includes('.')))
     {
-        res.status(400).json("Unable to register")
+        res.status(400).json("Wrong inputs")
     }
     else{
         db.transaction(trx=>{

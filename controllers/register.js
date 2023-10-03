@@ -9,7 +9,6 @@ const handleRegister = (req , res, db, bcrypt)=>{
         res.status(400).json("Wrong inputs")
     }
     else{
-        console.log("Right format");
         db.transaction(trx=>{
             trx.insert({
                 hash: hash,
@@ -26,7 +25,10 @@ const handleRegister = (req , res, db, bcrypt)=>{
             }).then(trx.commit)
             .catch(trx.rollback);
         }) 
-        .catch(err => res.status(400).json("Unable to register"));
+        .catch(err => {
+            console.log("Right format");
+            res.status(400).json("Unable to register");
+        });     
     }
 }
 

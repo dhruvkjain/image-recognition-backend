@@ -12,17 +12,17 @@ const ApiCall = require("./controllers/ApiCall");
 const db = knex({
     client: 'pg',
     connection: {
-    //   host : process.env.DATABASE_HOST,
-    //   user : process.env.DATABASE_USER,
-    //   port : process.env.DATABASE_PORT,
-    //   password : process.env.DATABASE_PW,
-    //   database : process.env.DATABASE_DB
+      host : process.env.DATABASE_HOST,
+      user : process.env.DATABASE_USER,
+      port : process.env.DATABASE_PORT,
+      password : process.env.DATABASE_PW,
+      database : process.env.DATABASE_DB
 
-      host : 'dpg-ckdd0huct0pc73burttg-a',
-      user : 'smart_brain_db_v0ak_user',
-      port : 5432,
-      password : 'iXAb8zvXG81NztR8V9V897B6KXmYSFM8',
-      database : 'smart_brain_db_v0ak'
+    //   host : 'dpg-ckdd0huct0pc73burttg-a',
+    //   user : 'smart_brain_db_v0ak_user',
+    //   port : 5432,
+    //   password : 'iXAb8zvXG81NztR8V9V897B6KXmYSFM8',
+    //   database : 'smart_brain_db_v0ak'
     }
   });
 

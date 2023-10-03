@@ -9,6 +9,7 @@ const handleRegister = (req , res, db, bcrypt)=>{
         res.status(400).json("Wrong inputs")
     }
     else{
+        console.log("Right format");
         db.transaction(trx=>{
             trx.insert({
                 hash: hash,

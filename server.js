@@ -14,14 +14,13 @@ const db = knex({
     connection: {
       host : process.env.DATABASE_HOST,
       user : process.env.DATABASE_USER,
-      port : process.env.DATABSE_PORT,
+      port : process.env.DATABASE_PORT,
       password : process.env.DATABASE_PW,
-      database : process.env.DATABSE_DB
+      database : process.env.DATABASE_DB
     }
   });
 
 
-  console.log(process.env.DATABASE_HOST);
 // console.log(db.select('*').from('users'));
 
 app.use(express.json({ extended: false }));

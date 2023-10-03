@@ -20,6 +20,8 @@ const db = knex({
     }
   });
 
+
+  console.log(process.env.DATABASE_HOST);
 // console.log(db.select('*').from('users'));
 
 app.use(express.json({ extended: false }));

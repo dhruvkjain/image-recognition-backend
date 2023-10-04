@@ -1,6 +1,7 @@
 const express = require("express");
 // import { Express } from "express";
 const app = express();
+require("./fetch-polyfill");
 
 const bcrypt = require("bcrypt-nodejs");
 // import { bcrypt } from "bcrypt-nodejs";
@@ -25,12 +26,6 @@ const db = knex({
       port : process.env.DATABASE_PORT,
       password : process.env.DATABASE_PW,
       database : process.env.DATABASE_DB
-
-    //   host : 'dpg-ckdd0huct0pc73burttg-a',
-    //   user : 'smart_brain_db_v0ak_user',
-    //   port : 5432,
-    //   password : 'iXAb8zvXG81NztR8V9V897B6KXmYSFM8',
-    //   database : 'smart_brain_db_v0ak'
     }
   });
 

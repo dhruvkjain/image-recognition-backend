@@ -8,10 +8,10 @@ const cors = require('cors');
 // import { cors } from "cors";
 const knex = require('knex');
 // import { knex } from "knex";
-import handleRegister from "./controllers/register";
-import handleSignin from "./controllers/signin";
-import handleimages from "./controllers/images";
-import handleApiCall from "./controllers/ApiCall";
+import handleRegister from "../controllers/register";
+import handleSignin from "../controllers/signin";
+import handleimages from "../controllers/images";
+import handleApiCall from "../controllers/ApiCall";
 
 const db = knex({
     client: 'pg',

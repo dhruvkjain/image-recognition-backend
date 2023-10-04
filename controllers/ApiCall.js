@@ -1,5 +1,5 @@
 const handleApiCall = (req , res)=>{
-    const PAT = 'e54ef744ee8b480c98d47744f14c25ca';
+    const PAT = process.env.API_CLARIFAI_PAT;
     const USER_ID = 'clarifai';
     const APP_ID = 'main';
     const MODEL_ID = 'general-image-detection';

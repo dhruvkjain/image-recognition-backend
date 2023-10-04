@@ -40,14 +40,12 @@ const handleApiCall = (req , res)=>{
 
     const getAPI = async () => {
       const response = await fetch("https://api.clarifai.com/v2/models/" + MODEL_ID + "/outputs", requestOptions);
-        if (response.ok) {
-          const data = await response.json();
-          console.log(data);
-          res.send(data);
-        }
+      const data = await response.json();
+      console.log(data);
+      res.send(data);
     };
-    
     getAPI();
+
 }
 
 module.exports={

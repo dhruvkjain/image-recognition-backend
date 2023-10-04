@@ -1,7 +1,6 @@
 const express = require("express");
 // import { Express } from "express";
 const app = express();
-require("./fetch-polyfill");
 
 const bcrypt = require("bcrypt-nodejs");
 // import { bcrypt } from "bcrypt-nodejs";

@@ -34,7 +34,7 @@ const handleApiCall = (req , res)=>{
       .then(response => response.json())
       .then(result =>{
         res.send(result);
-      })
+      }).catch(err=>{res.status(400).json("API call failed")})
 }
 
 module.exports = {

@@ -8,6 +8,4 @@ const handleimages = (req , res, db, bcrypt)=>{
     .catch(err=>res.status(404).json("Unable to get entries"));
 }
 
-module.exports = {
-    handleimages : handleimages
-}
+export default handleimages;

@@ -37,6 +37,4 @@ const handleApiCall = (req , res)=>{
       }).catch(err=>{res.status(400).json("API call failed")})
 }
 
-module.exports = {
-    handleApiCall : handleApiCall
-}
+export default handleApiCall;

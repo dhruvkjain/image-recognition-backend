@@ -1,7 +1,7 @@
 // const express = require("express");
 // import { express } from "express";
-import pkg from 'express';
-const { express } = pkg;
+import pkg4 from 'express';
+const { express } = pkg4;
 const app = express;
 
 // const bcrypt = require("bcrypt-nodejs");

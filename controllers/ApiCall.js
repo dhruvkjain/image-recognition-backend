@@ -1,4 +1,4 @@
-// const fetch = require('node-fetch');
+const fetch = require('node-fetch');
 
 const handleApiCall = (req , res)=>{
     const PAT = process.env.API_CLARIFAI_PAT;
@@ -32,19 +32,19 @@ const handleApiCall = (req , res)=>{
       body: raw
     };
 
-    // fetch("https://api.clarifai.com/v2/models/" + MODEL_ID + "/outputs", requestOptions)
-    //   .then(response => response.json())
-    //   .then(result =>{
-    //     res.send(result);
-    //   }).catch(err=>{res.status(400).json("API call failed")})
+    fetch("https://api.clarifai.com/v2/models/" + MODEL_ID + "/outputs", requestOptions)
+      .then(response => response.json())
+      .then(result =>{
+        res.send(result);
+      }).catch(err=>{res.status(400).json("API call failed")})
 
-    const getAPI = async () => {
-      const response = await fetch("https://api.clarifai.com/v2/models/" + MODEL_ID + "/outputs", requestOptions);
-      const data = await response.json();
-      console.log(data);
-      res.send(data);
-    };
-    getAPI();
+    // const getAPI = async () => {
+    //   const response = await fetch("https://api.clarifai.com/v2/models/" + MODEL_ID + "/outputs", requestOptions);
+    //   const data = await response.json();
+    //   console.log(data);
+    //   res.send(data);
+    // };
+    // getAPI();
 
 }
 

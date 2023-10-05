@@ -12,10 +12,10 @@ const knex = require('knex');
 // const register = require("./controllers/register");
 // const images = require("./controllers/images");
 // const ApiCall = require("./controllers/ApiCall");
-import handleRegister from "../controllers/register.js";
-import handleSignin from "../controllers/signin.js";
-import handleimages from "../controllers/images.js";
-import handleApiCall from "../controllers/ApiCall.js";
+import handleRegister from "./controllers/register.js";
+import handleSignin from "./controllers/signin.js";
+import handleimages from "./controllers/images.js";
+import handleApiCall from "./controllers/ApiCall.js";
 
 const db = knex({
     client: 'pg',

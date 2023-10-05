@@ -1,5 +1,5 @@
 const express = require("express");
-import { Express } from "express";
+// import { Express } from "express";
 const app = Express();
 
 const bcrypt = require("bcrypt-nodejs");

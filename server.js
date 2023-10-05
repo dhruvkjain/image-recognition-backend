@@ -1,13 +1,13 @@
-const express = require("express");
-// import { Express } from "express";
-const app = Express();
+// const express = require("express");
+import { express } from "express";
+const app = express();
 
-const bcrypt = require("bcrypt-nodejs");
-// import { bcrypt } from "bcrypt-nodejs";
-const cors = require('cors');
-// import { cors } from "cors";
-const knex = require('knex');
-// import { knex } from "knex";
+// const bcrypt = require("bcrypt-nodejs");
+import { bcrypt } from "bcrypt-nodejs";
+// const cors = require('cors');
+import { cors } from "cors";
+// const knex = require('knex');
+import { knex } from "knex";
 // const signin = require("./controllers/signin");
 // const register = require("./controllers/register");
 // const images = require("./controllers/images");

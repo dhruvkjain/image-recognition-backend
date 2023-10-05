@@ -3,7 +3,9 @@ import { express } from "express";
 const app = express();
 
 // const bcrypt = require("bcrypt-nodejs");
-import { bcrypt } from "bcrypt-nodejs";
+// import { bcrypt } from "bcrypt-nodejs";
+import pkg3 from 'bcrypt-nodejs';
+const { bcrypt } = pkg3;
 // const cors = require('cors');
 // import { cors } from "cors";
 import pkg from 'cors';

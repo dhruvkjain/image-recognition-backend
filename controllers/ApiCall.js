@@ -48,6 +48,5 @@ const handleApiCall = (req , res)=>{
 
 }
 
-module.exports={
-  handleApiCall: handleApiCall
-} 
+export default handleApiCall;
+ 

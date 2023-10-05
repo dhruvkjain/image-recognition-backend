@@ -1,6 +1,6 @@
 const express = require("express");
-// import { Express } from "express";
-const app = express();
+import { Express } from "express";
+const app = Express();
 
 const bcrypt = require("bcrypt-nodejs");
 // import { bcrypt } from "bcrypt-nodejs";
@@ -8,14 +8,14 @@ const cors = require('cors');
 // import { cors } from "cors";
 const knex = require('knex');
 // import { knex } from "knex";
-const signin = require("./controllers/signin");
-const register = require("./controllers/register");
-const images = require("./controllers/images");
-const ApiCall = require("./controllers/ApiCall");
-// import handleRegister from "./controllers/register";
-// import handleSignin from "./controllers/signin";
-// import handleimages from "./controllers/images";
-// import handleApiCall from "./controllers/ApiCall";
+// const signin = require("./controllers/signin");
+// const register = require("./controllers/register");
+// const images = require("./controllers/images");
+// const ApiCall = require("./controllers/ApiCall");
+import handleRegister from "./controllers/register";
+import handleSignin from "./controllers/signin";
+import handleimages from "./controllers/images";
+import handleApiCall from "./controllers/ApiCall";
 
 const db = knex({
     client: 'pg',
@@ -38,13 +38,13 @@ app.use(cors());
 
 app.get("/", (req, res) => {res.send("Success");})
 
-app.post("/signin", (req, res) => {signin.handleSignin(req,res,db,bcrypt)})
+app.post("/signin", (req, res) => {handleSignin(req,res,db,bcrypt)})
 
-app.post("/register", (req, res) => {register.handleRegister(req,res,db,bcrypt)})
+app.post("/register", (req, res) => {handleRegister(req,res,db,bcrypt)})
 
-app.put("/images",(req,res)=>{images.handleimages(req,res,db,bcrypt)})
+app.put("/images",(req,res)=>{handleimages(req,res,db,bcrypt)})
 
-app.post("/ApiCall",(req,res)=>{ApiCall.handleApiCall(req,res)})
+app.post("/ApiCall",(req,res)=>{handleApiCall(req,res)})
         
 
 
